@@ -1,40 +1,22 @@
-// WifiManager
-//#include <WiFi.h>
-//#include <DNSServer.h>
-//#include <ESP8266WebServer.h>
-//#include <WiFiManager.h>
-
-// ESP32 + GSM MODULE
+// Project: ESP32 GSM SIM800L
+// Author:Relton Lima
+// Date: 2023-10-01
+// Description: This project is to receive and send SMS using GSM SIM800L module and Lilygo T-Call ESP32-WROVER-B.
+//
+// This project is based on the Adafruit FONA library.
+//
 #include "Adafruit_FONA.h"
 // Please select the corresponding model
 
-//  #define SIM800L_IP5306_VERSION_20190610
+// #define SIM800L_IP5306_VERSION_20190610
 // #define SIM800L_AXP192_VERSION_20200327
 // #define SIM800C_AXP192_VERSION_20200609
 #define SIM800L_IP5306_VERSION_20200811
 
 #include "utilities.h"
-//
-//#define MODEM_RST             5
-//#define MODEM_PWRKEY          4
-//#define MODEM_POWER_ON       23
-//#define MODEM_TX             27
-//#define MODEM_RX             26
-//
-//#define MODEM_DTR            32
-//#define MODEM_RI             33
-//
-//#define I2C_SDA              21
-//#define I2C_SCL              22
-//#define LED_GPIO             13
-//#define LED_ON               HIGH
-//#define LED_OFF              LOW
-//
-//#define IP5306_ADDR          0x75
-//#define IP5306_REG_SYS_CTL0  0x00
 
-#define SIM800L_RX     26 //GPIO 16
-#define SIM800L_TX     27 //GPIO 17
+#define SIM800L_RX     26
+#define SIM800L_TX     27
 #define SIM800L_PWRKEY 4
 #define SIM800L_RST    5
 #define SIM800L_POWER  23
